@@ -1,6 +1,6 @@
 # What did you type - Reverse Engineering CTF Write Up
 
-<img width="678" height="533" alt="image" src="https://github.com/user-attachments/assets/4ce54fbe-5a3c-4cf4-a2f6-042485bd3e45" />
+<img width="678" height="533" alt="Screenshot 2026-02-21 132618" src="https://github.com/user-attachments/assets/5b1faad8-ae01-4057-819b-5bee7a971e86" />
 
 Difficulty: Medium
 
@@ -51,7 +51,7 @@ Observed filename/body pairs:
 - `IDK_why_I_saved_this.xlsx` -> `upload(10)`
 - `sexy_picture.jpg` -> `upload(14)`
 
-  <img width="466" height="337" alt="image" src="https://github.com/user-attachments/assets/ac8e2ba0-b56a-43c3-84f8-68a2d2c28309" />
+<img width="466" height="337" alt="Screenshot 2026-02-21 134114" src="https://github.com/user-attachments/assets/29bc7a6f-5863-4c53-8ba5-4616e436f400" />
 
 ---
 
@@ -238,7 +238,7 @@ Flag parts were split across different stolen artifacts.
 
 Part 1 (`xlsx`):
 
-<img width="369" height="176" alt="image" src="https://github.com/user-attachments/assets/5c9c4302-d57f-4511-b646-69e8cbb244fb" />
+<img width="369" height="176" alt="Screenshot 2026-02-21 143128" src="https://github.com/user-attachments/assets/19395641-03dc-4698-b8b0-1fbe73fdc920" />
 
 ```text
 CMO{Dumb357
@@ -246,7 +246,7 @@ CMO{Dumb357
 
 Part 2 (`jpg`):
 
-<img width="977" height="487" alt="image" src="https://github.com/user-attachments/assets/6709729a-f7a0-4c7c-b6a6-aa25438d759f" />
+<img width="977" height="487" alt="Screenshot 2026-02-21 143217" src="https://github.com/user-attachments/assets/d8678d15-d9f7-473d-b5e2-4ffc524b008f" />
 
 ```text
 _P3r50n_
@@ -254,7 +254,7 @@ _P3r50n_
 
 Part 3 (`docx`):
 
-<img width="616" height="539" alt="image" src="https://github.com/user-attachments/assets/c6ccb43b-b391-48c7-94db-fabdbe7a39ba" />
+<img width="616" height="539" alt="Screenshot 2026-02-21 143456" src="https://github.com/user-attachments/assets/cd80dd48-c3e6-4d4e-9775-3229fecf9f70" />
 
 - `word/header2.xml` watermark string contained:
 
