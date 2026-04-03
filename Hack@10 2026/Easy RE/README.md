@@ -130,7 +130,7 @@ Since the login check already showed that no username and password were needed, 
 
 After that, the app generated new `background.bkp` and showed the hint popup.
 
-Pulled the generated file from the emulator and the file is the encrypted version of the wallpaper loaded from `assets/background.txt`.
+Pulled the generated file from the emulator
 
 ---
 
