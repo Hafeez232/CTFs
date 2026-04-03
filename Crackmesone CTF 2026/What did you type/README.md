@@ -262,12 +262,6 @@ Part 3 (`docx`):
 1n_7h3_M1lky_W4y_!!!}
 ```
 
-Concatenation:
-
-```text
-CMO{Dumb357_P3r50n_1n_7h3_M1lky_W4y_!!!}
-```
-
 ---
 
 ### Final Flag
