@@ -51,7 +51,7 @@ In Golang, the main function is main.main.
 
 - The main function initializes a local HTTP server configured to run on port 8080.
 - There are two Fprintln calls with unclear messages; this is a common side effect of how decompilers interpret Go binaries.
-- Unlike C-style strings, Go strings are not null-terminated. Instead, they are defined as a `struct` containing
+- Unlike C-style strings, Go strings are not null-terminated. Instead, they are defined as a `struct` 
 
 ---
 
