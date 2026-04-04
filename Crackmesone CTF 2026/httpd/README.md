@@ -57,15 +57,15 @@ In Golang, the main function is main.main.
 
 ### Decoy HTTP Server
 
+<img width="652" height="423" alt="image" src="https://github.com/user-attachments/assets/fe836829-7c21-4f94-b069-4e434696a186" />
+
 The handler logic is simple:
 
 - If the request method is `GET`, it returns:
 
-<img width="652" height="423" alt="image" src="https://github.com/user-attachments/assets/fe836829-7c21-4f94-b069-4e434696a186" />
-
-  ```text
-  Nothing to see here :{
-  ```
+```text
+Nothing to see here :{
+```
 
 - Otherwise it returns:
 
