@@ -156,12 +156,6 @@ Because x86 is little-endian, the actual packet bytes are:
 
 `c6 de 5f e5`
 
-So, Let:
-
-```text
-A = 0xe55fdec6
-```
-
 The binary also reads the 2-byte ICMP checksum from `raw[0x24:0x26]`. It mixes that checksum with the constant above to derive two extra 2-byte values, then concatenates everything into the final AES key.
 
 Tthe 16-byte AES key should assembled like this:
