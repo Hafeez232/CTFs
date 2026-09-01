@@ -11,7 +11,7 @@ You're asking why BitbLocker uses TPM? Well, you only need to understand the pow
 
 T - Trusted, P - Potato, M - Module
 
-Author: Kaspersky
+Author: -
 
 ---
 - Files: `biblocker_5d741069dd2afdda`
@@ -55,7 +55,7 @@ target_key = d6b9ac3e973f597ab291bd21cb0db68a
 
 ## Password Derivation
 
-Open `derive_decrypt_key` function in the decompiler
+Go to `derive_decrypt_key` function in the decompiler
 
 <img width="594" height="215" alt="Screenshot 2026-08-31 211226" src="https://github.com/user-attachments/assets/10b9bebe-c8ec-440e-af12-902f4a10b6bf" />
 
@@ -90,8 +90,8 @@ However, we don't know where `secret_fault_bytes` come from.
 
 This is the one step where its hard to do a live debugger. To even reach the two fake reads at runtime the binary must:
 
-- run as root (`getuid() == 0` — hence the `sudo` usage string)
-- not be traced: `check_tracer` → `get_tracer_pid` reads `/proc/self/status`, and the SIGSEGV handler is only installed when no debugger is attached. In practice, under GDB the process simply crashes with SIGSEGV and the `segsegv_handler` breakpoint is never reached.
+- run as root (`getuid() == 0`, hence the `sudo` usage string)
+- not be traced: `check_tracer` → `get_tracer_pid` reads `/proc/self/status`, and the SIGSEGV handler is only installed when no debugger is attached. Usually, under GDB the process simply crashes with SIGSEGV and the `segsegv_handler` breakpoint is never reached.
 
 - so to avoid making my head spinning even more, we'll use Claude (saviour) for scripting
 
@@ -167,7 +167,7 @@ or hide the tracer, then break on `segsegv_handler` and read `RAX` after each fa
 
 ## Recover and Decrypting Embedded File
 
-carve the encrypted blob from the binary. Use the symbol values to compute offset and size:
+Carve the encrypted blob from the binary. Use the symbol values to compute offset and size:
 
 ```text
 offset = fs_img_begin file offset
