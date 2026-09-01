@@ -152,8 +152,6 @@ print(f"secret_fault_bytes = {secret_fault_bytes.hex()}")
 print(f"aes_key            = {aes_key.hex()}")
 PY
 ```
- I found a way to do it dynamically later after CTF :D (patch out the root/anti-debug checks, 
- or hide the tracer, then break on `segsegv_handler` and read `RAX` after each fault), but the fastest way to perform anti-debug-proof route is to reimplement the handler offline in Python:
 
  Python expected output:
 
@@ -163,6 +161,9 @@ fault_addr=0xa524f867b58 crc=0xa843a070 qword=10196fdd8e16d405
 secret_fault_bytes = bcc18b954063597b10196fdd8e16d405
 aes_key            = 6a7827abd75c0001a288d2fc451b628f
 ```
+
+I found a way to do it dynamically later after CTF :D (patch out the root/anti-debug checks, 
+or hide the tracer, then break on `segsegv_handler` and read `RAX` after each fault), but the fastest way to perform anti-debug-proof route is to reimplement the handler offline in Python.
 
 ## Recover and Decrypting Embedded File
 
